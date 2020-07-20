@@ -1,0 +1,8 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Title: {{blog.title}}</h5>
+        <p class="card-text">Summary: {{blog.summary}}</p>
+        <p *ngIf="showContent">{{blog.content}}</p>
+        <button class="btn btn-primary" (click)="readBtnClicked()">{{btnText}}</button>
+    </div>
+</div>
