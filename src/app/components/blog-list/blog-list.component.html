@@ -1,4 +1,4 @@
-<div *ngFor="let blog of blogs">
-    <app-blog-post-tile [blog]="blog"></app-blog-post-tile>
-</div>
-
+<app-blog-post-tile *ngFor="let blog of blogs[0]; index as i" [blog]="blog" ></app-blog-post-tile>
+<app-pagination [noOfPages]="blogs.length" 
+                (pageClicked)="paginationPageClicked($event)">
+</app-pagination>

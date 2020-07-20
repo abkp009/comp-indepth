@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "comp-indepth"
+    }
+  },
+  "defaultProject": "comp-indepth",
+  "cli": {
+    "analytics": false
+  }
 }
