@@ -7,16 +7,16 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class PaginationComponent implements OnInit {
   @Input() noOfPages: number;
-  @Output() clickedPageNo: EventEmitter<number>;
+  @Output() clickedPageEvent = new EventEmitter<number>();
   pages: Array<number>;
   constructor() { }
 
   ngOnInit(): void {
     this.pages = new Array(this.noOfPages);
   }
-  pageClicked(pageNo){
-    console.log('pagination.pageClicked '+pageNo);
-    this.clickedPageNo.emit(pageNo);
+  pageClicked(pageNo) {
+    console.log('pagination.pageClicked ' + pageNo);
+    this.clickedPageEvent.emit(pageNo);
   }
 
 }

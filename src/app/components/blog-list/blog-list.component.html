@@ -1,4 +1,10 @@
-<app-blog-post-tile *ngFor="let blog of blogs[0]; index as i" [blog]="blog" ></app-blog-post-tile>
-<app-pagination [noOfPages]="blogs.length" 
-                (pageClicked)="paginationPageClicked($event)">
+<button class="btn" (click)="expandAllChildren()">Expand All</button>
+<app-blog-post-tile
+      #tile
+      *ngFor="let blog of blogs[currentPage]; index as i" 
+      [blog]="blog" >
+</app-blog-post-tile>
+<app-pagination 
+      [noOfPages]="blogs.length"
+      (clickedPageEvent)="clickedPageEventListener($event)">
 </app-pagination>

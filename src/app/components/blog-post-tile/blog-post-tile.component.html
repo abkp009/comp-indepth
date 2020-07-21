@@ -2,7 +2,7 @@
     <div class="card-body">
         <h5 class="card-title">Title: {{blog.title}}</h5>
         <p class="card-text">Summary: {{blog.summary}}</p>
-        <p *ngIf="showContent" (click)="toggleBlogContent()">{{blog.content}}</p>
-        <button class="btn btn-primary" (click)="showBlogContent()">Show</button>
+        <p (click)="expandBlogContent()">{{blog.content}}</p>
+        <button class="btn btn-primary">Show</button>
     </div>
 </div>

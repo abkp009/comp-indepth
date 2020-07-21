@@ -8,6 +8,7 @@ import { BlogListComponent } from './components/blog-list/blog-list.component';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { TruncatePipe } from './utils/truncate.pipe';
 import { PaginationComponent } from './components/pagination/pagination.component'
+import {BlogDataService} from './services/blog-data.service'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [TruncatePipe],
+  providers: [TruncatePipe, BlogDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
